@@ -27,6 +27,3 @@ inf_ci_proportion <- function(df, res_var, res_success) {
   }
 }
 
-inf_test <-function(df, col, prop_value) {
-  print()
-}
