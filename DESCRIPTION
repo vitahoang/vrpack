@@ -1,11 +1,10 @@
-Package: vitapackage
+Package: vrpack
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Vita's R Packages
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Vitahoang
+Maintainer: hunghoang.vita@gmail.com
+Description: Shorthand R functions collected for personal study
+License: MIT
 Encoding: UTF-8
 LazyData: true
