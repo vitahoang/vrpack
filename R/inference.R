@@ -45,3 +45,29 @@ inf_ci_proportion <- function(df, res_var, res_success) {
   }
 }
 
+
+#' Check Condition for Regression Model
+#'
+#' @param model The regression model needed to be checked
+#'
+#' @return None
+#' @export
+#'
+#' @examples
+check_cond_reggression <- function(model) {
+  #Fitted plot to check the linearity condition
+  fit <- ggplot(data = model, aes(x = .fitted, y = .resid)) +
+    geom_point() +
+    geom_hline(yintercept = 0, linetype = "dashed") +
+    xlab("Fitted values") +
+    ylab("Residuals")
+  #Histogram to check the nearly normal condition
+  hit <- ggplot(data = model, aes(x = .resid)) +
+    geom_histogram(binwidth = 25) +
+    xlab("Residuals")
+  #QQ plot to check the constant variability condition
+  qq <- ggplot(data = model, aes(sample = .resid)) +
+    stat_qq()
+
+  return(ggarrange(fit, hit, qq, ncol = 2, nrow = 2))
+}

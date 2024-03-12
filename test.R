@@ -9,3 +9,5 @@ sum_us_12 <- summary(us12)
 
 inf <- inf_ci_proportion(us12, "response", "atheist")
 print(inf[1])
+
+
